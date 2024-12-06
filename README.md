@@ -105,8 +105,8 @@ El catálogo está estructurado jerárquicamente, con diferentes categorías com
 
                                  [Pelicula1]
                               /       |       \
-                       [Pelicula2] [Serie1] [Pelicula3]
-                     /        \             /       \
+                    [Pelicula2]   [Serie1] [Pelicula3]
+                     /       \              /       \
               [Serie2]    [Pelicula4] [Serie3]   [Pelicula5]
                   |                                   |
               [Serie4]                           [Pelicula6]
