@@ -41,6 +41,26 @@
 6) **Creo un `arbol_general`** para guardar peliculas y series (temporadas y capitulos) y le heredo los parametros de la clase `Contenido`
    - Aplico cambios a la busqueda de contenidos de manera tal que trabajen con el arbol y dejen de trabajar con la lista
    - Cambio la forma recursiva para que busque las recomendaciones desde la raiz del arbol general
+---
 
+7) **Creo `grafo.py`** donde cada nodo representa una pelicula o serie
+   - Baso las similitudes de generos y visualizaciones de los usuarios para darle peso a los contenidos y asi generar recomendaciones
+   - importo el `grafo.py` a la `Plataforma` y inicializo el grafo en el constructor
+     - Añado una implementacion en `agregar_pelicula` y `agregar_serie` para añadir el contenido al grafo
+   - Añado un método para construir las relaciones del grafo:
+     - `construir_grafo` Relaciona nodos por género
+     - `recorrer_y_relacionar` Relaciona nodos por historial de usuarios
+   - Añado un metodo para recomendar contenido pero con el grafo 
   
-  
+  ___ 
+  # Conclusión:
+
+## 1. El código está dividido en los siguientes archivos:
+
+- **`plataforma.py`**: Controlador principal de la plataforma.
+- **`usuario.py`**: Implementación de la clase Usuario.
+- **`contenido.py`**: Definición de la clase base Contenido.
+- **`arbol_binario.py`**: Implementación del ABB para gestión de usuarios y popularidad.
+- **`arbol_general.py`**: Implementación del Árbol General para el catálogo.
+- **`grafo.py`**: Implementación del Grafo para modelar relaciones entre contenidos.
+- **`main.py`**: Archivo de prueba donde se ejecuta el flujo completo del sistema.
