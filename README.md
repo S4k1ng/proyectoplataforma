@@ -52,6 +52,9 @@
      - `recorrer_y_relacionar` Relaciona nodos por historial de usuarios
    - Añado un metodo para recomendar contenido pero con el grafo 
   ---
+8) **Creo `main.py`** en el cual creamos la plataforma y le pasamos datos reales de pelicualas, series y usuarios para poder trabajar y testear el codigo
+
+  ---
   ___ 
   # Conclusión del proyecto:
 
