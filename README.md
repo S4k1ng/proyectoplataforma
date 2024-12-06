@@ -51,9 +51,11 @@
      - `construir_grafo` Relaciona nodos por género
      - `recorrer_y_relacionar` Relaciona nodos por historial de usuarios
    - Añado un metodo para recomendar contenido pero con el grafo 
-  
+  ---
   ___ 
-  # Conclusión:
+  # Conclusión del proyecto:
+
+En este proyecto, se diseñó y desarrolló una plataforma de streaming optimizada utilizando diversas estructuras de datos. A través de un Árboles (ABB y AG) y un Grafo, conseguimos organizar tanto los usuarios como el catálogo de contenidos y mejorar la generación de recomendaciones personalizadas.
 
 ## 1. El código está dividido en los siguientes archivos:
 
@@ -64,3 +66,53 @@
 - **`arbol_general.py`**: Implementación del Árbol General para el catálogo.
 - **`grafo.py`**: Implementación del Grafo para modelar relaciones entre contenidos.
 - **`main.py`**: Archivo de prueba donde se ejecuta el flujo completo del sistema.
+
+## 2. Estructura del arbol general:
+El catálogo está estructurado jerárquicamente, con diferentes categorías como películas y series, cada una con sus respectivos contenidos. La organización se ve de la siguiente manera:
+              
+      Catálogo
+     ├── Películas
+     │   ├── Película1
+     │   └── Película2
+     └── Series
+         └── Serie1
+             └── Temporada1
+                 └── Capítulo1
+
+## 3. Estructura del arbol binario:
+   - **Gestión de Usuarios**:
+      Los usuarios están organizados mediante un Árbol Binario de Búsqueda (ABB), donde cada nodo representa un usuario y las relaciones se manejan de forma eficiente para permitir búsquedas rápidas y agregados de usuarios por su nombre.
+
+                      [Luis]
+                     /      \
+                [Ana]      [Pedro]
+                 /             \
+           [Beatriz]          [Carlos]
+
+     
+   - **Popularidad de Películas**:
+      Cada nodo representa una película, y el valor dentro del nodo es su popularidad. Las películas se organizan según la popularidad para hacer búsquedas y recomendaciones eficientes.
+
+                            [Película (80)]
+                          /                \
+                 [Película (50)]        [Película (90)]
+                  /          \                 \
+           [Película (30)] [Película (60)]   [Película (100)]
+
+
+## 4. Estructura del grafo:      
+   La generación de recomendaciones se realiza utilizando un Grafo donde los nodos son los contenidos (películas y series) y las aristas representan similitudes entre ellos (basadas en género o preferencias de los usuarios). Los contenidos relacionados se exploran para hacer recomendaciones basadas en lo que otros usuarios con gustos similares han visto. La estructura del grafo es la siguiente:
+
+                                 [Pelicula1]
+                              /       |       \
+                       [Pelicula2] [Serie1] [Pelicula3]
+                     /        \             /       \
+              [Serie2]    [Pelicula4] [Serie3]   [Pelicula5]
+                  |                                   |
+              [Serie4]                           [Pelicula6]
+
+
+
+
+
+
